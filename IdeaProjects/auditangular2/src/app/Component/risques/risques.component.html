@@ -1,0 +1,32 @@
+<table class="table table-bordered table-dark">
+  <thead>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">risque</th>
+    <th scope="col">niveau</th>
+    <th scope="col">impact</th>
+    <th scope="col">Recomandation</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let risque of risques ">
+    <td>{{risque.id}}</td>
+    <td>{{risque.nom}}</td>
+    <td>{{risque.niveau}}</td>
+    <td>{{risque.impact}}</td>
+    <td>{{risque.solution}}</td>
+    <td class="text-center">
+      <a class='btn badge-info'  (click)="gotoEditRisque(risque.id)"><span class="glyphicon glyphicon-edit"></span> Modifier</a>
+      &nbsp;&nbsp;<a  class="btn btn-danger btn-xs" (click)="deleteRisque(risque.id)"><span class="glyphicon glyphicon-remove"></span>Suprimer </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-success btn-xs">sélectionner </button>
+
+    </td>
+  </tbody>
+
+</table>
+<pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize"></pagination>
+<button type="button" class="btn btn-secondary" (click)="gotoAddRisque()">Ajouter un nouveau risque</button>
+
+
