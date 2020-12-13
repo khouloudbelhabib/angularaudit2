@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommentaireComponent } from './commentaire.component';
+import { QuestionaireComponent } from './questionaire.component';
 
 // @ts-ignore
-describe('CommentaireComponent', () => {
-  let component: CommentaireComponent;
-  let fixture: ComponentFixture<CommentaireComponent>;
+describe('QuestionaireComponent', () => {
+  let component: QuestionaireComponent;
+  let fixture: ComponentFixture<QuestionaireComponent>;
 
   // @ts-ignore
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentaireComponent ]
+      declarations: [ QuestionaireComponent ]
     })
     .compileComponents();
   });
 
   // @ts-ignore
   beforeEach(() => {
-    fixture = TestBed.createComponent(CommentaireComponent);
+    fixture = TestBed.createComponent(QuestionaireComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

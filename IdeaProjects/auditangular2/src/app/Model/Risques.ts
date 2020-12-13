@@ -1,9 +1,11 @@
 export class Risques {
   id: any;
-  nom: string;
-  selected: boolean;
   niveau: any;
   impact: any;
   solution: any;
-
+  question: any;
+  risque: any;
+  // tslint:disable-next-line:ban-types
+  reponse: any;
+  interlocuteurcible: any;
 }

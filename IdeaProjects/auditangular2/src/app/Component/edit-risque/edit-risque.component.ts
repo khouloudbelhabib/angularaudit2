@@ -33,14 +33,14 @@ export class EditRisqueComponent implements OnInit {
       data =>
       {
         console.log('data added');
-        this._route.navigate(['risques']);
+        this._route.navigate(['questionaire']);
       },
       error => console.log('error')
     );
   }
   // tslint:disable-next-line:typedef
   gotolist(){
-    this._route.navigate(['risques']);
+    this._route.navigate(['questionaire']);
 
   }
 

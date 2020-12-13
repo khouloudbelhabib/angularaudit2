@@ -1,6 +1,6 @@
 .image{
   height:45em; background-size:cover; width:auto;
-  background-image:url('https://cdn1-production-images-kly.akamaized.net/B4uyPukQcacNv5EUhmysnSOoMzA=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1071192/original/048148800_1448878932-anonymous-650x43028291.jpg');
+  background-image:url('https://image.freepik.com/free-vector/closed-padlock-digital-background-cyber-security_42077-2188.jpg');
   background-position:800% 20%;
 }
 
@@ -11,14 +11,14 @@ label {
 
 .card-container.card {
   max-width: 400px !important;
-  padding: 70px 40px;
+  padding: 70px 30px;
 }
 
 .card {
   background-color: #f7f7f7;
   padding: 0px 75px 700px 0px;
   margin: 70px  auto 105px;
-  margin-left : 850px;
+  margin-left : 980px;
   margin-top: 0px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;

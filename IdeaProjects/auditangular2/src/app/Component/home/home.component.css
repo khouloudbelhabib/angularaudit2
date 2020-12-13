@@ -1,6 +1,8 @@
-.carousel-caption d-none d-md-block{
-  margin-bottom: 70%;
- padding-bottom: 70%;
-
+.carousel-inner{
+  height: 500px;
 }
+.col-sm-6{
+  margin-left: 15%;
+}
+
 

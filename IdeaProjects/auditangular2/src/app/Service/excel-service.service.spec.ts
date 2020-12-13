@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UserServiceService } from './user-service.service';
+import { ExcelServiceService } from './excel-service.service';
 
 // @ts-ignore
-describe('UserServiceService', () => {
-  let service: UserServiceService;
+describe('ExcelServiceService', () => {
+  let service: ExcelServiceService;
 
   // @ts-ignore
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(UserServiceService);
+    service = TestBed.inject(ExcelServiceService);
   });
 
   // @ts-ignore

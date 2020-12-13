@@ -1,27 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import {UserServiceService} from '../../Service/user-service.service';
 import {RisquesServiceService} from '../../Service/risques-service.service';
 import {Router} from '@angular/router';
-import '@angular/compiler';
+import {Risques} from '../../Model/Risques';
 
 @Component({
-  selector: 'app-risques',
-  templateUrl: './risques.component.html',
-  styleUrls: ['./risques.component.css']
+  selector: 'app-questionaire',
+  templateUrl: './questionaire.component.html',
+  styleUrls: ['./questionaire.component.css']
 })
-
-export class RisquesComponent implements OnInit {
-  maxSize = 5;
-  bigTotalItems = 175;
-  bigCurrentPage = 1;
-  private risque;
-  public dataSource: any;
+export class QuestionaireComponent implements OnInit {
   risques: any;
-  // tslint:disable-next-line:variable-name
-  constructor(private userService: UserServiceService, private risquesService: RisquesServiceService, private _route: Router) { }
+  // @ts-ignore
+  risque = new Risques();
+  page = 1;
 
-  ngOnInit(): void { this.getRisques();
+  totalRecord: number;
+
+  // tslint:disable-next-line:variable-name
+  constructor(private risquesService: RisquesServiceService, private _route: Router) {
   }
+
+  ngOnInit(): void {
+    this.getRisques();
+  }
+
   // tslint:disable-next-line:typedef
   private getRisques() {
     this.risquesService.getRisqueList().subscribe(
@@ -30,7 +32,6 @@ export class RisquesComponent implements OnInit {
         this.risques = data;
       }
     );
-
   }
 
   // tslint:disable-next-line:typedef
@@ -47,10 +48,19 @@ export class RisquesComponent implements OnInit {
     this.risquesService.deleteRisqueById(id).subscribe(
       data => {
         console.log('delete succesfully');
-        this._route.navigate(['/risques']);
+        this._route.navigate(['/questionaire']);
       },
-      error => console.log('Exception')
+      error => console.log('Exception' )
+
     );
 
+  }
+  // tslint:disable-next-line:typedef
+  gotoListClient() {
+    this._route.navigate(['/ListClient']);
+  }
+  // tslint:disable-next-line:typedef
+  gotoRapport(){
+    this._route.navigate(['/rapport']);
   }
 }

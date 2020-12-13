@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {TokenStorageService} from './token-storage.service';
 import {Observable} from 'rxjs';
-const API_URL = 'http://localhost:8090/user/';
+
+ const API_URL = 'http://localhost:8090/user/';
 @Injectable({
   providedIn: 'root'
 })
@@ -30,7 +31,8 @@ export class UserServiceService {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
   // @ts-ignore
-  getAllUser(): Observable<any>{
-  return this.http.get('http://localhost:8090/user/ListUsers');
+  // tslint:disable-next-line:typedef
+  getAllUser(){
+    return this.http.get('http://localhost:8090/user/ListUsers' );
   }
 }
