@@ -9,6 +9,9 @@ import {ReclamationServiceService} from '../../Service/reclamation-service.servi
   styleUrls: ['./list-reclamation.component.css']
 })
 export class ListReclamationComponent implements OnInit {
+  page = 1;
+
+  totalRecord: number;
 
   private Reclamation;
   reclamations: Observable<Reclamation[]>;

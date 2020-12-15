@@ -11,13 +11,15 @@
           <mat-icon>horizontal_split</mat-icon>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/ListClient">ListdeClient</a>
           <a class="dropdown-item" href="/reclamation">Reclamation</a>
           <a class="dropdown-item" href="/AjoutCommentaire">Commentaire</a>
-          <a class="dropdown-item" href="/AjouterRendezVous">Rendez-Vous</a></div>
+          <a class="dropdown-item" href="/AjouterRendezVous">Rendez-Vous</a>
+        <a class="dropdown-item" href="/ListCommentaire">avis de clients</a></div>
       </li>
       <li class="nav-item" *ngIf="showAdminBoard">
-        <a href="/questionaire" class="nav-link" routerLink="admin">Admin Board</a>
-      </li>
+          <a href="/questionaire" class="nav-link" routerLink="admin">Admin Board</a>
+
       <li class="nav-item">
         <a href="/ListClient" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
       </li>

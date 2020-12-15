@@ -39,6 +39,9 @@ import { QuestionaireComponent } from './Component/questionaire/questionaire.com
 import { RapportComponent } from './Component/rapport/rapport.component';
 import {ExcelServiceService} from './Service/excel-service.service';
 import {MatIconModule} from '@angular/material/icon';
+import { ToastModule } from 'ng-uikit-pro-standard';
+
+
 
 @NgModule({
   declarations: [
@@ -63,6 +66,7 @@ import {MatIconModule} from '@angular/material/icon';
   imports: [
     BrowserModule,
     MatIconModule,
+    ToastModule.forRoot(),
     AppRoutingModule,
     FormsModule,
     NgbModalModule,

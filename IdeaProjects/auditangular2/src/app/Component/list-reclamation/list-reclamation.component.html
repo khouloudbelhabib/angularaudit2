@@ -7,7 +7,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
+<br>
 <div class="container">
 <div>
 <table class="table table-dark table-hover">
@@ -18,12 +18,27 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let Reclamation of reclamations | async">
+  <tr *ngFor="let Reclamation of reclamations | async | paginate: {
+         id: 'listing_pagination',
+         itemsPerPage: 5,
+         currentPage: page,
+         totalItems: totalRecord
+         }">
     <td>{{Reclamation.username}}</td>
     <td>{{Reclamation.reclamation}}</td>
   </tr>
   </tbody>
+  <div  class="col-md-24">
+    <pagination-controls
+      id="listing_pagination"
+      maxSize="5"
+      directionLinks="true"
+
+      (pageChange)=" page = $event"
+    ></pagination-controls>
+  </div>
 </table>
+
 </div>
 </div>
 </div>

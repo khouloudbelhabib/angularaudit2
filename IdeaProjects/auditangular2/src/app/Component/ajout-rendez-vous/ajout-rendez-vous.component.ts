@@ -3,6 +3,7 @@ import {Rendezvous} from '../../Model/Rendzvous';
 import {Router} from '@angular/router';
 import {AjoutRendezVousService} from '../../Service/ajout-rendez-vous.service';
 import {FormControl, FormGroup} from '@angular/forms';
+import {ToastService} from 'ng-uikit-pro-standard';
 
 @Component({
   selector: 'app-ajout-rendez-vous',
@@ -15,7 +16,7 @@ export class AjoutRendezVousComponent implements OnInit {
   rendezvous1: any;
 
   // tslint:disable-next-line:variable-name
-  constructor(private  _route: Router, private  rendezvousService: AjoutRendezVousService) {
+  constructor(private  _route: Router, private  rendezvousService: AjoutRendezVousService, private toastrService: ToastService) {
   }
 
   ngOnInit(): void {
@@ -32,6 +33,9 @@ export class AjoutRendezVousComponent implements OnInit {
       console.log('imposible de prendre un rendez_vous');
     }
   }
-
+  // tslint:disable-next-line:typedef
+  showSuccess() {
+    this.toastrService.success('le rendez_vous a été  ajouté avec succés');
+  }
 
 }

@@ -55,12 +55,17 @@ export class QuestionaireComponent implements OnInit {
     );
 
   }
+
   // tslint:disable-next-line:typedef
-  gotoListClient() {
-    this._route.navigate(['/ListClient']);
+  gotoCalendar() {
+    this._route.navigate(['/ListRendezvous']);
   }
   // tslint:disable-next-line:typedef
   gotoRapport(){
     this._route.navigate(['/rapport']);
+  }
+  // tslint:disable-next-line:typedef
+  gotoListReclamation(){
+    this._route.navigate(['/listreclamation']);
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Commentaire} from '../../Model/Commentaire';
 import {Router} from '@angular/router';
 import {CommentaireServiceService} from '../../Service/commentaire-service.service';
+import { ToastService } from 'ng-uikit-pro-standard';
 
 @Component({
   selector: 'app-commentaire',
@@ -12,7 +13,7 @@ export class CommentaireComponent implements OnInit {
 
   commentaire = new Commentaire();
   // tslint:disable-next-line:variable-name
-  constructor(private  _route: Router,  private commentaireService: CommentaireServiceService) { }
+  constructor(private  _route: Router,  private commentaireService: CommentaireServiceService , private toastrService: ToastService) { }
 
   ngOnInit(): void {
   }
@@ -26,5 +27,8 @@ export class CommentaireComponent implements OnInit {
       error => console.log('error')
     );
   }
-
+  // tslint:disable-next-line:typedef
+  showSuccess() {
+    this.toastrService.success('le commentaire a été  ajouté avec succés');
+  }
 }
